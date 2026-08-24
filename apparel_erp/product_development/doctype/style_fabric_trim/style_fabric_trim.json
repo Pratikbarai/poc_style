@@ -1,0 +1,17 @@
+{
+ "doctype": "DocType",
+ "name": "Style Fabric Trim",
+ "module": "Product Development",
+ "istable": 1,
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "fields": [
+  {"fieldname": "category", "fieldtype": "Select", "label": "Category", "options": "Fabric\nTrim\nPackaging", "reqd": 1, "in_list_view": 1, "columns": 1},
+  {"fieldname": "item", "fieldtype": "Data", "label": "Item", "reqd": 1, "in_list_view": 1, "columns": 2},
+  {"fieldname": "description", "fieldtype": "Data", "label": "Description", "in_list_view": 1, "columns": 2},
+  {"fieldname": "composition", "fieldtype": "Data", "label": "Composition", "in_list_view": 1, "columns": 2},
+  {"fieldname": "gsm", "fieldtype": "Data", "label": "GSM", "in_list_view": 1, "columns": 1},
+  {"fieldname": "consumption", "fieldtype": "Data", "label": "Consumption", "in_list_view": 1, "columns": 2}
+ ],
+ "permissions": []
+}

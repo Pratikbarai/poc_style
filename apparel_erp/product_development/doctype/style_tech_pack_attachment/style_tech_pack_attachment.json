@@ -1,0 +1,14 @@
+{
+ "doctype": "DocType",
+ "name": "Style Tech Pack Attachment",
+ "module": "Product Development",
+ "istable": 1,
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "fields": [
+  {"fieldname": "label", "fieldtype": "Data", "label": "Label", "reqd": 1, "in_list_view": 1, "columns": 2},
+  {"fieldname": "attachment", "fieldtype": "Attach", "label": "File", "reqd": 1, "in_list_view": 1, "columns": 3},
+  {"fieldname": "remarks", "fieldtype": "Data", "label": "Remarks", "in_list_view": 1, "columns": 2}
+ ],
+ "permissions": []
+}

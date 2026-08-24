@@ -1,0 +1,20 @@
+{
+ "doctype": "DocType",
+ "name": "Style Measurement",
+ "module": "Product Development",
+ "istable": 1,
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "fields": [
+  {"fieldname": "sequence", "fieldtype": "Int", "label": "#", "in_list_view": 1, "columns": 1},
+  {"fieldname": "measurement_point", "fieldtype": "Data", "label": "Measurement Point", "reqd": 1, "in_list_view": 1, "columns": 3},
+  {"fieldname": "size_xs", "fieldtype": "Float", "label": "XS", "precision": "1", "in_list_view": 1, "columns": 1},
+  {"fieldname": "size_s", "fieldtype": "Float", "label": "S", "precision": "1", "in_list_view": 1, "columns": 1},
+  {"fieldname": "size_m", "fieldtype": "Float", "label": "M", "precision": "1", "in_list_view": 1, "columns": 1},
+  {"fieldname": "size_l", "fieldtype": "Float", "label": "L", "precision": "1", "in_list_view": 1, "columns": 1},
+  {"fieldname": "size_xl", "fieldtype": "Float", "label": "XL", "precision": "1", "in_list_view": 1, "columns": 1},
+  {"fieldname": "size_xxl", "fieldtype": "Float", "label": "XXL", "precision": "1", "in_list_view": 1, "columns": 1},
+  {"fieldname": "tolerance", "fieldtype": "Data", "label": "Tol. (+/-)", "in_list_view": 1, "columns": 1}
+ ],
+ "permissions": []
+}

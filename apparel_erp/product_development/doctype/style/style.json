@@ -1,0 +1,111 @@
+{
+ "doctype": "DocType",
+ "name": "Style",
+ "module": "Product Development",
+ "autoname": "field:style_no",
+ "naming_rule": "By fieldname",
+ "engine": "InnoDB",
+ "is_submittable": 0,
+ "image_field": "style_image",
+ "title_field": "style_name",
+ "track_changes": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "fields": [
+  {"fieldname": "tab_style_info", "fieldtype": "Tab Break", "label": "Style Overview"},
+
+  {"fieldname": "col_image", "fieldtype": "Column Break"},
+  {"fieldname": "style_image", "fieldtype": "Attach Image", "label": "Style Image"},
+
+  {"fieldname": "col_left", "fieldtype": "Column Break"},
+  {"fieldname": "style_no", "fieldtype": "Data", "label": "Style No", "reqd": 1, "unique": 1, "in_list_view": 1},
+  {"fieldname": "style_name", "fieldtype": "Data", "label": "Style Name", "reqd": 1, "in_list_view": 1},
+  {"fieldname": "product_type", "fieldtype": "Select", "label": "Product Type", "options": "Shirt\nT-Shirt\nTrouser\nDress\nJacket\nSkirt"},
+  {"fieldname": "category", "fieldtype": "Data", "label": "Category"},
+  {"fieldname": "season", "fieldtype": "Data", "label": "Season"},
+  {"fieldname": "launch_date", "fieldtype": "Date", "label": "Launch Date"},
+
+  {"fieldname": "col_mid", "fieldtype": "Column Break"},
+  {"fieldname": "customer_brand", "fieldtype": "Data", "label": "Customer / Brand"},
+  {"fieldname": "designer", "fieldtype": "Data", "label": "Designer"},
+  {"fieldname": "merchandiser", "fieldtype": "Data", "label": "Merchandiser"},
+  {"fieldname": "department", "fieldtype": "Select", "label": "Department", "options": "Design\nMerchandising\nProduction\nSampling"},
+  {"fieldname": "country_of_origin", "fieldtype": "Data", "label": "Country of Origin"},
+  {"fieldname": "status", "fieldtype": "Select", "label": "Status", "options": "Draft\nActive\nOn Hold\nDiscontinued", "default": "Draft", "in_list_view": 1, "in_standard_filter": 1},
+  {"fieldname": "current_stage", "fieldtype": "Select", "label": "Current Stage", "options": "Style Overview\nDesign & Tech Pack\nBOM\nSamples\nCosting\nFit Approval\nProto Approval\nProduction", "default": "Style Overview", "in_list_view": 1, "in_standard_filter": 1, "description": "Drives which stage badge shows on the Design & Tech Pack header and is advanced by the stage action buttons (e.g. Send for Sampling)."},
+  {"fieldname": "tech_pack_version", "fieldtype": "Data", "label": "Tech Pack Version", "default": "1.0"},
+
+  {"fieldname": "col_desc", "fieldtype": "Column Break"},
+  {"fieldname": "description", "fieldtype": "Small Text", "label": "Description"},
+  {"fieldname": "sb_attrs", "fieldtype": "Section Break", "label": "Style Attributes"},
+  {"fieldname": "col_attr1", "fieldtype": "Column Break"},
+  {"fieldname": "fit", "fieldtype": "Data", "label": "Fit"},
+  {"fieldname": "sleeve", "fieldtype": "Data", "label": "Sleeve"},
+  {"fieldname": "placket", "fieldtype": "Data", "label": "Placket"},
+  {"fieldname": "col_attr2", "fieldtype": "Column Break"},
+  {"fieldname": "collar", "fieldtype": "Data", "label": "Collar"},
+  {"fieldname": "gender", "fieldtype": "Select", "label": "Gender", "options": "Women\nMen\nUnisex\nKids"},
+  {"fieldname": "fabric_type", "fieldtype": "Data", "label": "Fabric Type"},
+
+  {"fieldname": "tab_design_tech_pack", "fieldtype": "Tab Break", "label": "Design & Tech Pack"},
+  {"fieldname": "dtp_header_html", "fieldtype": "HTML", "label": "Overview Summary", "description": "Read-only recap of the Style Overview tab - nothing here needs to be re-entered."},
+
+  {"fieldname": "sb_design_sketch", "fieldtype": "Section Break", "label": "1. Design Sketch"},
+  {"fieldname": "col_sketch_front", "fieldtype": "Column Break"},
+  {"fieldname": "design_sketch_front", "fieldtype": "Attach Image", "label": "Front"},
+  {"fieldname": "col_sketch_back", "fieldtype": "Column Break"},
+  {"fieldname": "design_sketch_back", "fieldtype": "Attach Image", "label": "Back"},
+
+  {"fieldname": "sb_colourways_sizes", "fieldtype": "Section Break", "label": "2 & 3. Colourways / Size Range"},
+  {"fieldname": "dtp_colours_sizes_html", "fieldtype": "HTML", "label": "Colourways & Sizes", "description": "Pulled from the Colours & Sizes tab. Add or edit colours/sizes there - they appear here automatically."},
+
+  {"fieldname": "sb_measurements", "fieldtype": "Section Break", "label": "4. Measurements (Finished Garment)"},
+  {"fieldname": "measurements", "fieldtype": "Table", "label": "Measurement Points", "options": "Style Measurement"},
+
+  {"fieldname": "sb_construction", "fieldtype": "Section Break", "label": "5. Construction Details"},
+  {"fieldname": "col_construction1", "fieldtype": "Column Break"},
+  {"fieldname": "seam_type", "fieldtype": "Data", "label": "Seam Type"},
+  {"fieldname": "stitch_per_inch", "fieldtype": "Data", "label": "Stitch Per Inch"},
+  {"fieldname": "seam_allowance", "fieldtype": "Data", "label": "Seam Allowance"},
+  {"fieldname": "col_construction2", "fieldtype": "Column Break"},
+  {"fieldname": "overlock", "fieldtype": "Select", "label": "Overlock", "options": "Yes\nNo", "default": "Yes"},
+  {"fieldname": "top_stitch", "fieldtype": "Data", "label": "Top Stitch"},
+  {"fieldname": "special_instructions", "fieldtype": "Small Text", "label": "Special Instructions"},
+  {"fieldname": "construction_diagram", "fieldtype": "Attach Image", "label": "Construction Diagram"},
+
+  {"fieldname": "sb_fabric_trims", "fieldtype": "Section Break", "label": "6. Fabric & Trims"},
+  {"fieldname": "fabric_trims", "fieldtype": "Table", "label": "Fabric, Trims & Packaging", "options": "Style Fabric Trim"},
+
+  {"fieldname": "sb_reference_images", "fieldtype": "Section Break", "label": "7. Reference Images"},
+  {"fieldname": "reference_images", "fieldtype": "Table", "label": "Reference Images", "options": "Style Reference Image"},
+
+  {"fieldname": "sb_attachments", "fieldtype": "Section Break", "label": "8. Attachments"},
+  {"fieldname": "tech_pack_attachments", "fieldtype": "Table", "label": "Attachments", "options": "Style Tech Pack Attachment"},
+
+  {"fieldname": "sb_activity_next_action", "fieldtype": "Section Break", "label": ""},
+  {"fieldname": "col_activity", "fieldtype": "Column Break", "label": "9. Activity Log"},
+  {"fieldname": "dtp_activity_html", "fieldtype": "HTML", "label": "Activity Log"},
+  {"fieldname": "col_next_action", "fieldtype": "Column Break", "label": "10. Next Action"},
+  {"fieldname": "assign_to", "fieldtype": "Link", "label": "Assign To", "options": "User"},
+  {"fieldname": "dtp_next_action_html", "fieldtype": "HTML", "label": "Next Action"},
+
+  {"fieldname": "tab_colours_sizes", "fieldtype": "Tab Break", "label": "Colours & Sizes"},
+  {"fieldname": "colours", "fieldtype": "Table", "label": "Colours", "options": "Style Colour"},
+  {"fieldname": "sizes", "fieldtype": "Table MultiSelect", "label": "Sizes", "options": "Style Size", "description": "Select all sizes this style is offered in. The Colour \u00d7 Size matrix on the Matrix tab rebuilds automatically."},
+
+  {"fieldname": "tab_bom", "fieldtype": "Tab Break", "label": "Style BOM (Base)"},
+  {"fieldname": "bom_items", "fieldtype": "Table", "label": "BOM Items", "options": "Style BOM Item"},
+  {"fieldname": "bom_note", "fieldtype": "Small Text", "label": "Note", "read_only": 1, "default": "Quantities are for size 'M' and base colour. Size/Colour wise consumption can be managed in exceptions."},
+
+  {"fieldname": "tab_matrix", "fieldtype": "Tab Break", "label": "Matrix"},
+  {"fieldname": "matrix_html", "fieldtype": "HTML", "label": "Colour - Size Matrix (Auto Generated SKUs)"},
+  {"fieldname": "matrix_items", "fieldtype": "Table", "label": "Matrix Items (Generated)", "options": "Style Matrix Item", "read_only": 1, "hidden": 1},
+
+  {"fieldname": "tab_rest_api", "fieldtype": "Tab Break", "label": "REST API"},
+  {"fieldname": "rest_api_html", "fieldtype": "HTML", "label": "REST API"}
+ ],
+ "permissions": [
+  {"role": "System Manager", "read": 1, "write": 1, "create": 1, "delete": 1, "submit": 0},
+  {"role": "Manufacturing Manager", "read": 1, "write": 1, "create": 1}
+ ]
+}
